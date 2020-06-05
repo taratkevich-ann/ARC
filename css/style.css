@@ -1,0 +1,48 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0; }
+
+.container {
+  width: 100%; }
+
+header {
+  padding: 15px 14px 0 36px;
+  background-color: #eeeeee; }
+  header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    header .container nav ul {
+      list-style: none;
+      display: inline-block; }
+      header .container nav ul li {
+        display: inline-block; }
+        header .container nav ul li a {
+          text-decoration: none;
+          text-transform: uppercase;
+          font-family: "Montserrat", sans-serif;
+          color: #4a4a49;
+          font-size: 16px;
+          padding: 0 25px; }
+          @media screen and (max-width: 1920px) {
+            header .container nav ul li a {
+              padding: 0 15px; } }
+    header .container .header_soc a {
+      text-decoration: none; }
+      header .container .header_soc a:after {
+        content: "";
+        display: inline-block;
+        font-family: Font Awesome\ 5 Brands;
+        color: #000;
+        font-size: 20px;
+        margin-right: 6.5px;
+        margin-left: 6.5px; }
+      header .container .header_soc a:first-of-type:after {
+        margin-left: 0; }
+      header .container .header_soc a:nth-child(2):after {
+        content: ""; }
+      header .container .header_soc a:last-child:after {
+        margin-right: 0; }
+
+/*# sourceMappingURL=style.css.map */

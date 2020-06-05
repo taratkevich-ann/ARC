@@ -1,0 +1,55 @@
+$main-font-color: #4a4a49
+$font-size: 16px
+$main-font: 'Montserrat', sans-serif
+
+@mixin max-screen ($res)
+  @media screen and (max-width: $res)
+    @content
+
+*
+  padding: 0
+  margin: 0
+
+.container
+  width: 100%
+
+header
+  padding: 15px 14px 0 36px
+  background-color: #eeeeee
+  .container
+    display: flex
+    align-items: center
+    justify-content: space-between
+    nav
+      ul
+        list-style: none
+        display: inline-block
+        li
+          display: inline-block
+          a
+            text-decoration: none
+            text-transform: uppercase
+            font-family: $main-font
+            color: $main-font-color
+            font-size: $font-size
+            padding: 0 25px
+            @include max-screen(1920px)
+              padding: 0 15px
+
+    .header_soc
+      a
+        text-decoration: none
+        &:after
+          content: "\f39e"
+          display: inline-block
+          font-family: Font Awesome\ 5 Brands
+          color: #000
+          font-size: 20px
+          margin-right: 6.5px
+          margin-left: 6.5px
+        &:first-of-type:after
+          margin-left: 0
+        &:nth-child(2):after
+          content: "\f16d"
+        &:last-child:after
+          margin-right: 0
