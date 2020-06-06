@@ -4,11 +4,15 @@ $additional-font-color: #fff
 $font-size: 16px
 $main-font: 'Montserrat', sans-serif
 
-%for_float
-  &:after
-    content: ""
-    display: block
-    clear: both
+%for_button
+  background-color: $additional-color
+  text-align: center
+  font-family: $main-font
+  font-weight: 600
+  font-size: 14px
+  color: $additional-font-color
+  text-transform: uppercase
+
 
 @mixin max-screen($res)
   @media screen and (max-width: $res)
@@ -31,6 +35,7 @@ header
     position: relative
     top: 23px
     z-index: 1
+
   nav
     ul
       list-style: none
@@ -86,6 +91,7 @@ header
     left: 154px
     @include max-screen(1680px)
       padding-top: 65px
+
     h1
       color: $additional-font-color
       font-size: 60px
@@ -98,8 +104,10 @@ header
       @include max-screen(1680px)
         font-size: 46px
         margin-bottom: 32px
+
       span
         color: $additional-color
+
     p
       color: $additional-font-color
       font-size: 18px
@@ -114,21 +122,127 @@ header
 
     .decouvrir
       text-align: right
+
       a
         display: inline-block
-        background-color: $additional-color
+        @extend %for_button
         line-height: 64px
         padding: 0 100px
-        text-align: center
-        font-family: $main-font
-        font-weight: 600
-        font-size: 14px
-        color: $additional-font-color
-        text-transform: uppercase
         text-decoration: none
 
   .banner_img
     img
       display: inline-block
       width: 100%
+
+.consultation
+  padding: 136px
+
+  .text_consultation
+    color: $main-color
+    font-family: $main-font
+
+    h2
+      font-size: 60px
+      text-transform: uppercase
+      line-height: 65px
+      text-align: center
+      max-width: 963px
+      margin: auto
+      margin-bottom: 56px
+
+    p
+      font-size: 18px
+      line-height: 30px
+      font-weight: 300
+      max-width: 858px
+      text-align: center
+      margin: auto
+      margin-bottom: 118px
+
+  .common_img_consultation
+    display: flex
+    justify-content: space-around
+    overflow: hidden
+
+
+    .img_consultation
+      position: relative
+      overflow: hidden
+      padding-top: 16px
+      transition: all 1s ease-in-out
+      &:hover .hover_consultation
+        display: block
+        -moz-transform: translateX(0px) translateY(-16px)
+        -webkit-transform: translateX(0px) translateY(-16px)
+        -o-transform: translateX(0px) translateY(-16px)
+        -ms-transform: translateX(0px) translateY(-16px)
+        transform: translateX(0px) translateY(-16px)
+        transition: all 1s ease-in-out
+      img
+        position: relative
+        display: inline-block
+        width: 100%
+        overflow: hidden
+        //transition: all 1s ease-in-out
+        //&:hover
+        //  -moz-transform: translateX(0px) translateY(-16px)
+        //  -webkit-transform: translateX(0px) translateY(-16px)
+        //  -o-transform: translateX(0px) translateY(-16px)
+        //  -ms-transform: translateX(0px) translateY(-16px)
+        //  transform: translateX(0px) translateY(-16px)
+        //  transition: all 1s ease-in-out
+
+
+      .hover_consultation
+        position: absolute
+        top: 0
+        left: 0
+        //bottom: 0
+        width: 100%
+        background-color: rgba(71, 70, 69, .53)
+        padding-top: 249px
+        padding-left: 25px
+        padding-bottom: 34px
+        overflow: hidden
+        display: none
+        //&:hover
+        //  display: block
+
+        @include max-screen(1680px)
+          padding-top: 129px
+        p
+          color: $additional-font-color
+          font-family: $main-font
+          font-size: $font-size
+          font-weight: 400
+          line-height: 26px
+          max-width: 298px
+          margin-bottom: 27px
+          @include max-screen(1680px)
+            max-width: 235px
+        a
+          display: inline-block
+          line-height: 48px
+          padding: 0 63px
+          text-decoration: none
+          @extend %for_button
+
+      p.interior_name
+        font-family: $main-font
+        color: $main-color
+        font-size: 15px
+        font-weight: 600
+        text-align: center
+        text-transform: uppercase
+        line-height: 65px
+        background-color: #f4f2f2
+        margin-bottom: 142px
+
+
+
+
+
+
+
 

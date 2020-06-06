@@ -1,4 +1,13 @@
 @charset "UTF-8";
+.banner .banner_text .decouvrir a, .consultation .common_img_consultation .img_consultation .hover_consultation a {
+  background-color: #ea6721;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  text-transform: uppercase; }
+
 * {
   padding: 0;
   margin: 0; }
@@ -92,18 +101,95 @@ header {
       text-align: right; }
       .banner .banner_text .decouvrir a {
         display: inline-block;
-        background-color: #ea6721;
         line-height: 64px;
         padding: 0 100px;
-        text-align: center;
-        font-family: "Montserrat", sans-serif;
-        font-weight: 600;
-        font-size: 14px;
-        color: #fff;
-        text-transform: uppercase;
         text-decoration: none; }
   .banner .banner_img img {
     display: inline-block;
     width: 100%; }
+
+.consultation {
+  padding: 136px; }
+  .consultation .text_consultation {
+    color: #4a4a49;
+    font-family: "Montserrat", sans-serif; }
+    .consultation .text_consultation h2 {
+      font-size: 60px;
+      text-transform: uppercase;
+      line-height: 65px;
+      text-align: center;
+      max-width: 963px;
+      margin: auto;
+      margin-bottom: 56px; }
+    .consultation .text_consultation p {
+      font-size: 18px;
+      line-height: 30px;
+      font-weight: 300;
+      max-width: 858px;
+      text-align: center;
+      margin: auto;
+      margin-bottom: 118px; }
+  .consultation .common_img_consultation {
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden; }
+    .consultation .common_img_consultation .img_consultation {
+      position: relative;
+      overflow: hidden;
+      padding-top: 16px;
+      transition: all 1s ease-in-out; }
+      .consultation .common_img_consultation .img_consultation:hover .hover_consultation {
+        display: block;
+        -moz-transform: translateX(0px) translateY(-16px);
+        -webkit-transform: translateX(0px) translateY(-16px);
+        -o-transform: translateX(0px) translateY(-16px);
+        -ms-transform: translateX(0px) translateY(-16px);
+        transform: translateX(0px) translateY(-16px);
+        transition: all 1s ease-in-out; }
+      .consultation .common_img_consultation .img_consultation img {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        overflow: hidden; }
+      .consultation .common_img_consultation .img_consultation .hover_consultation {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(71, 70, 69, 0.53);
+        padding-top: 249px;
+        padding-left: 25px;
+        padding-bottom: 34px;
+        overflow: hidden;
+        display: none; }
+        @media screen and (max-width: 1680px) {
+          .consultation .common_img_consultation .img_consultation .hover_consultation {
+            padding-top: 129px; } }
+        .consultation .common_img_consultation .img_consultation .hover_consultation p {
+          color: #fff;
+          font-family: "Montserrat", sans-serif;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 26px;
+          max-width: 298px;
+          margin-bottom: 27px; }
+          @media screen and (max-width: 1680px) {
+            .consultation .common_img_consultation .img_consultation .hover_consultation p {
+              max-width: 235px; } }
+        .consultation .common_img_consultation .img_consultation .hover_consultation a {
+          display: inline-block;
+          line-height: 48px;
+          padding: 0 63px;
+          text-decoration: none; }
+      .consultation .common_img_consultation .img_consultation p.interior_name {
+        font-family: "Montserrat", sans-serif;
+        color: #4a4a49;
+        font-size: 15px;
+        font-weight: 600;
+        text-align: center;
+        text-transform: uppercase;
+        line-height: 65px;
+        background-color: #f4f2f2;
+        margin-bottom: 142px; }
 
 /*# sourceMappingURL=style.css.map */
