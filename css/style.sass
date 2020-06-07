@@ -1,7 +1,7 @@
 $main-color: #4a4a49
 $additional-color: #ea6721
 $additional-font-color: #fff
-$font-size: 16px
+$font-size: 18px
 $main-font: 'Montserrat', sans-serif
 
 %for_button
@@ -12,6 +12,29 @@ $main-font: 'Montserrat', sans-serif
   font-size: 14px
   color: $additional-font-color
   text-transform: uppercase
+
+%for_soc
+  a
+    text-decoration: none
+
+    &:after
+      content: "\f39e"
+      display: inline-block
+      font-family: Font Awesome\ 5 Brands
+      color: #000
+      font-size: 20px
+      margin-right: 6.5px
+      margin-left: 6.5px
+
+    &:first-of-type:after
+      margin-left: 0
+
+    &:nth-child(2):after
+      content: "\f16d"
+      font-size: 18px
+
+    &:last-child:after
+      margin-right: 0
 
 @mixin max-screen($res)
   @media screen and (max-width: $res)
@@ -48,32 +71,13 @@ header
           text-transform: uppercase
           font-family: $main-font
           color: $main-color
-          font-size: $font-size
+          font-size: 16px
           padding: 0 25px
           @include max-screen(1680px)
             padding: 0 15px
 
   .header_soc
-    a
-      text-decoration: none
-
-      &:after
-        content: "\f39e"
-        display: inline-block
-        font-family: Font Awesome\ 5 Brands
-        color: #000
-        font-size: 20px
-        margin-right: 6.5px
-        margin-left: 6.5px
-
-      &:first-of-type:after
-        margin-left: 0
-
-      &:nth-child(2):after
-        content: "\f16d"
-
-      &:last-child:after
-        margin-right: 0
+    @extend %for_soc
 
 .banner
   background-color: $main-color
@@ -109,14 +113,14 @@ header
 
     p
       color: $additional-font-color
-      font-size: 18px
+      font-size: $font-size
       line-height: 30px
       font-family: $main-font
       font-weight: 300
       margin-bottom: 52px
       text-align: right
       @include max-screen(1680px)
-        font-size: $font-size
+        font-size: 16px
         margin-bottom: 32px
 
     .decouvrir
@@ -151,7 +155,7 @@ header
       margin-bottom: 56px
 
     p
-      font-size: 18px
+      font-size: $font-size
       line-height: 30px
       font-weight: 300
       max-width: 858px
@@ -250,7 +254,7 @@ header
       font-family: $main-font
       color: #db6428
       font-weight: 700
-      font-size: 18px
+      font-size: $font-size
       margin-bottom: 40px
 
     h3
@@ -267,7 +271,7 @@ header
       font-family: $main-font
       color: $main-color
       font-weight: 300
-      font-size: 18px
+      font-size: $font-size
       line-height: 30px
       max-width: 454px
       margin-bottom: 33px
@@ -327,7 +331,7 @@ header
       font-family: $main-font
       color: $main-color
       font-weight: 300
-      font-size: 18px
+      font-size: $font-size
       line-height: 30px
       max-width: 509px
       margin-bottom: 49px
@@ -343,6 +347,82 @@ header
       &:hover
         padding-left: 20px
         transition: all 1s ease-in-out
+
+.zone_contact
+  display: flex
+  justify-content: space-between
+  .left_zone_contact, .right_zone_contact
+    width: 50%
+    padding-top: 50px
+    padding-bottom: 63px
+    //&:hover
+    //  background-image: url("../images/visitez_07.jpg")
+    .contact_zone_sign
+      img
+        display: block
+        margin: auto
+        margin-bottom: 36px
+    a
+      display: block
+      text-decoration: none
+      font-family: 'Lora', serif
+      font-size: 40px
+      color: $main-color
+      text-align: center
+
+  .left_zone_contact
+    background-image: url("../images/visitez_2_07.png")
+    background-repeat: no-repeat
+
+  .right_zone_contact
+    background-image: url("../images/visitez_03.jpg")
+    background-repeat: no-repeat
+
+footer
+  background-color: #f4f2f2
+  padding-top: 76px
+  padding-bottom: 38px
+  img
+    display: block
+    margin: auto
+    margin-bottom: 63px
+
+  nav
+    text-align: center
+    ul
+      list-style: none
+      display: inline-block
+      li
+        display: inline-block
+        margin: 0 16px 59px
+        a
+          text-decoration: none
+          color: $main-color
+          font-family: $main-font
+          font-size: 12px
+          text-transform: uppercase
+
+  .footer_soc
+    @extend %for_soc
+    margin-bottom: 41px
+    text-align: center
+
+  p
+    font-family: $main-font
+    font-size: 12px
+    color: $main-color
+    text-align: center
+
+
+
+
+
+
+
+
+
+
+
 
 
 
