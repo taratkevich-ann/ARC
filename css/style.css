@@ -138,6 +138,13 @@ header {
       overflow: hidden;
       padding-top: 16px;
       transition: all 1s ease-in-out; }
+      .consultation .common_img_consultation .img_consultation:hover {
+        -moz-transform: translateX(0px) translateY(-16px);
+        -webkit-transform: translateX(0px) translateY(-16px);
+        -o-transform: translateX(0px) translateY(-16px);
+        -ms-transform: translateX(0px) translateY(-16px);
+        transform: translateX(0px) translateY(-16px);
+        transition: all 1s ease-in-out; }
       .consultation .common_img_consultation .img_consultation:hover .hover_consultation {
         display: block;
         -moz-transform: translateX(0px) translateY(-16px);
@@ -150,18 +157,20 @@ header {
         position: relative;
         display: inline-block;
         width: 100%;
-        overflow: hidden; }
+        overflow: hidden;
+        transition: all 1s ease-in-out; }
       .consultation .common_img_consultation .img_consultation .hover_consultation {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
+        height: 100%;
         background-color: rgba(71, 70, 69, 0.53);
         padding-top: 249px;
         padding-left: 25px;
-        padding-bottom: 34px;
         overflow: hidden;
-        display: none; }
+        display: none;
+        transition: all 1s ease-in-out; }
         @media screen and (max-width: 1680px) {
           .consultation .common_img_consultation .img_consultation .hover_consultation {
             padding-top: 129px; } }
@@ -181,15 +190,68 @@ header {
           line-height: 48px;
           padding: 0 63px;
           text-decoration: none; }
-      .consultation .common_img_consultation .img_consultation p.interior_name {
-        font-family: "Montserrat", sans-serif;
-        color: #4a4a49;
-        font-size: 15px;
-        font-weight: 600;
-        text-align: center;
-        text-transform: uppercase;
-        line-height: 65px;
-        background-color: #f4f2f2;
-        margin-bottom: 142px; }
+    .consultation .common_img_consultation p.interior_name {
+      font-family: "Montserrat", sans-serif;
+      color: #4a4a49;
+      font-size: 15px;
+      font-weight: 600;
+      text-align: center;
+      text-transform: uppercase;
+      line-height: 65px;
+      background-color: #f4f2f2;
+      margin-bottom: 144px; }
+
+.propose {
+  display: flex;
+  justify-content: space-between; }
+  .propose .arc_bg img {
+    position: absolute;
+    z-index: 4; }
+  .propose .text_propose {
+    padding-top: 454px;
+    padding-left: 248px; }
+    .propose .text_propose h4 {
+      font-family: "Montserrat", sans-serif;
+      color: #db6428;
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 40px; }
+    .propose .text_propose h3 {
+      font-family: "Montserrat", sans-serif;
+      color: #4a4a49;
+      font-weight: 700;
+      font-size: 50px;
+      text-transform: uppercase;
+      line-height: 55px;
+      margin-bottom: 75px;
+      max-width: 401px; }
+    .propose .text_propose p {
+      font-family: "Montserrat", sans-serif;
+      color: #4a4a49;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 30px;
+      max-width: 454px;
+      margin-bottom: 33px; }
+    .propose .text_propose a {
+      text-decoration: none;
+      font-family: "Montserrat", sans-serif;
+      color: #000;
+      font-size: 14px;
+      text-transform: uppercase;
+      transition: all 1s ease-in-out; }
+      .propose .text_propose a:hover {
+        padding-left: 20px;
+        transition: all 1s ease-in-out; }
+  .propose .img_propose {
+    margin-top: 154px;
+    background-color: #fef6f1;
+    padding-top: 158px;
+    padding-left: 93px; }
+    .propose .img_propose img {
+      display: inline-block;
+      width: 100%;
+      position: relative;
+      z-index: 5; }
 
 /*# sourceMappingURL=style.css.map */
