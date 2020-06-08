@@ -30,111 +30,248 @@ header .header_soc a, footer .footer_soc a {
   padding: 0;
   margin: 0; }
 
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #4a4a49; }
+
 header {
   padding: 0 14px 0 36px;
-  background-color: #eeeeee;
+  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between; }
-  header .header_logo {
+  @media screen and (max-width: 1024px) {
+    header {
+      flex-wrap: wrap;
+      align-content: space-between; } }
+  @media screen and (max-width: 1280px) {
+    header {
+      padding: 0 10px; } }
+  @media screen and (max-width: 1024px) {
+    header .header_logo {
+      order: 2; } }
+  header .header_logo img {
+    display: block;
+    width: 100%;
     position: relative;
     top: 23px;
-    z-index: 1; }
+    z-index: 4; }
+  @media screen and (max-width: 1024px) {
+    header nav {
+      order: 1;
+      text-align: center; } }
   header nav ul {
     list-style: none;
     display: inline-block; }
     header nav ul li {
       display: inline-block; }
       header nav ul li a {
+        color: #4a4a49;
         text-decoration: none;
         text-transform: uppercase;
-        font-family: "Montserrat", sans-serif;
-        color: #4a4a49;
         font-size: 16px;
-        padding: 0 25px; }
+        margin: 0 25px; }
         @media screen and (max-width: 1680px) {
           header nav ul li a {
             padding: 0 15px; } }
+        @media screen and (max-width: 1440px) {
+          header nav ul li a {
+            margin: 0 12px;
+            font-size: 14px; } }
+        @media screen and (max-width: 1280px) {
+          header nav ul li a {
+            margin: 0 9px; } }
+        @media screen and (max-width: 1024px) {
+          header nav ul li a {
+            margin: 0 -5px; } }
+        @media screen and (max-width: 414px) {
+          header nav ul li a {
+            margin: 0 -10px;
+            font-size: 12px; } }
+  header .header_soc {
+    text-decoration: none; }
+    @media screen and (max-width: 1024px) {
+      header .header_soc {
+        order: 3; } }
 
 .banner {
   background-color: #4a4a49;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   padding-bottom: 147px; }
   @media screen and (max-width: 1680px) {
     .banner {
       padding-bottom: 100px; } }
+  @media screen and (max-width: 414px) {
+    .banner {
+      flex-wrap: wrap;
+      padding-bottom: 50px; } }
   .banner .banner_text {
     max-width: 511px;
     padding-top: 308px;
     position: relative;
     left: 154px; }
-    @media screen and (max-width: 1680px) {
+    @media screen and (max-width: 1920px) {
       .banner .banner_text {
-        padding-top: 65px; } }
+        padding-top: 123px; } }
+    @media screen and (max-width: 1440px) {
+      .banner .banner_text {
+        padding-top: 100px; } }
+    @media screen and (max-width: 1280px) {
+      .banner .banner_text {
+        padding-top: 40px;
+        left: 100px; } }
+    @media screen and (max-width: 768px) {
+      .banner .banner_text {
+        left: 65px; } }
+    @media screen and (max-width: 414px) {
+      .banner .banner_text {
+        order: 2;
+        left: 0;
+        padding-right: 10px;
+        max-width: 320px; } }
     .banner .banner_text h1 {
       color: #fff;
       font-size: 60px;
-      font-family: "Montserrat", sans-serif;
       font-weight: 500;
       text-transform: uppercase;
       line-height: 64px;
       margin-bottom: 52px;
-      text-align: right; }
+      text-align: right;
+      max-width: 510px; }
       @media screen and (max-width: 1680px) {
         .banner .banner_text h1 {
           font-size: 46px;
           margin-bottom: 32px; } }
+      @media screen and (max-width: 1440px) {
+        .banner .banner_text h1 {
+          font-size: 40px;
+          margin-bottom: 28px;
+          line-height: 50px; } }
+      @media screen and (max-width: 1024px) {
+        .banner .banner_text h1 {
+          font-size: 38px;
+          line-height: 46px;
+          margin-bottom: 24px; } }
+      @media screen and (max-width: 768px) {
+        .banner .banner_text h1 {
+          font-size: 28px;
+          line-height: 36px;
+          margin-bottom: 10px; } }
       .banner .banner_text h1 span {
         color: #ea6721; }
     .banner .banner_text p {
       color: #fff;
       font-size: 18px;
       line-height: 30px;
-      font-family: "Montserrat", sans-serif;
       font-weight: 300;
       margin-bottom: 52px;
       text-align: right; }
+      @media screen and (min-width: 1680px) {
+        .banner .banner_text p {
+          max-width: 470px; } }
       @media screen and (max-width: 1680px) {
         .banner .banner_text p {
           font-size: 16px;
           margin-bottom: 32px; } }
+      @media screen and (max-width: 1440px) {
+        .banner .banner_text p {
+          font-size: 14px; } }
+      @media screen and (max-width: 1024px) {
+        .banner .banner_text p {
+          font-size: 12px;
+          line-height: 24px; } }
+      @media screen and (max-width: 768px) {
+        .banner .banner_text p {
+          line-height: 18px;
+          margin-bottom: 15px; } }
     .banner .banner_text .decouvrir {
       text-align: right; }
       .banner .banner_text .decouvrir a {
+        text-decoration: none;
         display: inline-block;
         line-height: 64px;
-        padding: 0 100px;
-        text-decoration: none; }
+        padding: 0 100px; }
+        @media screen and (max-width: 1024px) {
+          .banner .banner_text .decouvrir a {
+            padding: 0 80px; } }
+        @media screen and (max-width: 768px) {
+          .banner .banner_text .decouvrir a {
+            padding: 0 62px;
+            line-height: 50px;
+            font-size: 12px;
+            font-weight: 500; } }
   .banner .banner_img img {
     display: inline-block;
     width: 100%; }
+  @media screen and (max-width: 414px) {
+    .banner .banner_img {
+      order: 1; } }
 
 .consultation {
-  padding: 136px; }
-  .consultation .text_consultation {
-    color: #4a4a49;
-    font-family: "Montserrat", sans-serif; }
-    .consultation .text_consultation h2 {
-      font-size: 60px;
-      text-transform: uppercase;
-      line-height: 65px;
-      text-align: center;
-      max-width: 963px;
-      margin: auto;
-      margin-bottom: 56px; }
-    .consultation .text_consultation p {
-      font-size: 18px;
-      line-height: 30px;
-      font-weight: 300;
-      max-width: 858px;
-      text-align: center;
-      margin: auto;
-      margin-bottom: 118px; }
+  padding-top: 136px; }
+  @media screen and (max-width: 414px) {
+    .consultation {
+      padding: 70px; } }
+  .consultation .text_consultation h2 {
+    font-size: 60px;
+    text-transform: uppercase;
+    line-height: 65px;
+    text-align: center;
+    max-width: 963px;
+    margin: auto;
+    margin-bottom: 56px; }
+    @media screen and (max-width: 1440px) {
+      .consultation .text_consultation h2 {
+        font-size: 52px; } }
+    @media screen and (max-width: 1024px) {
+      .consultation .text_consultation h2 {
+        font-size: 46px; } }
+    @media screen and (max-width: 768px) {
+      .consultation .text_consultation h2 {
+        max-width: 730px;
+        margin-bottom: 40px;
+        font-size: 42px;
+        line-height: 58px; } }
+    @media screen and (max-width: 414px) {
+      .consultation .text_consultation h2 {
+        font-size: 25px;
+        line-height: 38px; } }
+  .consultation .text_consultation p {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 300;
+    max-width: 858px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 118px; }
+    @media screen and (max-width: 1440px) {
+      .consultation .text_consultation p {
+        margin-bottom: 80px; } }
+    @media screen and (max-width: 768px) {
+      .consultation .text_consultation p {
+        max-width: 670px;
+        margin-bottom: 60px;
+        font-size: 16px; } }
+    @media screen and (max-width: 414px) {
+      .consultation .text_consultation p {
+        font-size: 14px;
+        line-height: 20px; } }
   .consultation .common_img_consultation {
     display: flex;
     justify-content: space-around;
-    overflow: hidden; }
+    overflow: hidden;
+    padding: 0 200px; }
+    @media screen and (max-width: 1920px) {
+      .consultation .common_img_consultation {
+        padding: 0 50px; } }
+    @media screen and (max-width: 1440px) {
+      .consultation .common_img_consultation {
+        padding: 0 150px;
+        flex-wrap: wrap; } }
+    @media screen and (max-width: 1024px) {
+      .consultation .common_img_consultation {
+        padding: 0; } }
     .consultation .common_img_consultation .img_consultation {
       position: relative;
       overflow: hidden;
@@ -157,7 +294,7 @@ header {
         transition: all 1s ease-in-out; }
       .consultation .common_img_consultation .img_consultation img {
         position: relative;
-        display: inline-block;
+        display: block;
         width: 100%;
         overflow: hidden;
         transition: all 1s ease-in-out; }
@@ -173,12 +310,24 @@ header {
         overflow: hidden;
         display: none;
         transition: all 1s ease-in-out; }
-        @media screen and (max-width: 1680px) {
+        @media screen and (max-width: 1920px) {
           .consultation .common_img_consultation .img_consultation .hover_consultation {
             padding-top: 129px; } }
+        @media screen and (max-width: 1440px) {
+          .consultation .common_img_consultation .img_consultation .hover_consultation {
+            padding-left: 30px; } }
+        @media screen and (max-width: 414px) {
+          .consultation .common_img_consultation .img_consultation .hover_consultation {
+            padding-left: 10px;
+            padding-top: 60px; } }
+        @media screen and (max-width: 375px) {
+          .consultation .common_img_consultation .img_consultation .hover_consultation {
+            padding-top: 20px; } }
+        @media screen and (max-width: 320px) {
+          .consultation .common_img_consultation .img_consultation .hover_consultation {
+            padding-right: 10px; } }
         .consultation .common_img_consultation .img_consultation .hover_consultation p {
           color: #fff;
-          font-family: "Montserrat", sans-serif;
           font-size: 18px;
           font-weight: 400;
           line-height: 26px;
@@ -187,54 +336,139 @@ header {
           @media screen and (max-width: 1680px) {
             .consultation .common_img_consultation .img_consultation .hover_consultation p {
               max-width: 235px; } }
+          @media screen and (max-width: 1440px) {
+            .consultation .common_img_consultation .img_consultation .hover_consultation p {
+              max-width: 265px; } }
+          @media screen and (max-width: 414px) {
+            .consultation .common_img_consultation .img_consultation .hover_consultation p {
+              max-width: 200px; } }
+          @media screen and (max-width: 360px) {
+            .consultation .common_img_consultation .img_consultation .hover_consultation p {
+              font-size: 14px; } }
+          @media screen and (max-width: 320px) {
+            .consultation .common_img_consultation .img_consultation .hover_consultation p {
+              font-size: 12px;
+              line-height: 20px; } }
         .consultation .common_img_consultation .img_consultation .hover_consultation a {
           display: inline-block;
           line-height: 48px;
           padding: 0 63px;
           text-decoration: none; }
+          @media screen and (max-width: 414px) {
+            .consultation .common_img_consultation .img_consultation .hover_consultation a {
+              padding: 0 50px;
+              line-height: 38px; } }
+          @media screen and (max-width: 320px) {
+            .consultation .common_img_consultation .img_consultation .hover_consultation a {
+              font-weight: 500;
+              line-height: 30px;
+              font-size: 12px;
+              padding: 0 30px; } }
     .consultation .common_img_consultation p.interior_name {
-      font-family: "Montserrat", sans-serif;
-      color: #4a4a49;
       font-size: 15px;
       font-weight: 600;
       text-align: center;
       text-transform: uppercase;
-      line-height: 65px;
+      padding: 21px 0 33px;
       background-color: #f4f2f2;
-      margin-bottom: 144px; }
+      margin-bottom: 141px; }
+      @media screen and (max-width: 768px) {
+        .consultation .common_img_consultation p.interior_name {
+          margin-bottom: 100px; } }
+      @media screen and (max-width: 320px) {
+        .consultation .common_img_consultation p.interior_name {
+          font-size: 13px; } }
 
 .propose {
   display: flex;
   justify-content: space-between; }
+  @media screen and (max-width: 1024px) {
+    .propose {
+      align-items: center; } }
+  @media screen and (max-width: 768px) {
+    .propose {
+      flex-wrap: wrap; } }
   .propose .arc_bg img {
     position: absolute;
     z-index: 4; }
+    @media screen and (max-width: 1280px) {
+      .propose .arc_bg img {
+        display: block;
+        width: 100%; } }
   .propose .text_propose {
-    padding-top: 454px;
-    padding-left: 248px; }
+    padding: 454px 54px 0 248px; }
+    @media screen and (max-width: 1280px) {
+      .propose .text_propose {
+        padding: 408px 54px 0 229px; } }
+    @media screen and (max-width: 1024px) {
+      .propose .text_propose {
+        padding: 323px 42px 0 167px; } }
+    @media screen and (max-width: 768px) {
+      .propose .text_propose {
+        padding: 239px 42px 0 127px; } }
+    @media screen and (max-width: 414px) {
+      .propose .text_propose {
+        padding: 123px 30px 0 70px; } }
+    @media screen and (max-width: 375px) {
+      .propose .text_propose {
+        padding: 111px 25px 0 65px; } }
+    @media screen and (max-width: 320px) {
+      .propose .text_propose {
+        padding: 95px 10px 0 52px; } }
     .propose .text_propose h4 {
-      font-family: "Montserrat", sans-serif;
       color: #db6428;
       font-weight: 700;
       font-size: 18px;
       margin-bottom: 40px; }
+      @media screen and (max-width: 1024px) {
+        .propose .text_propose h4 {
+          margin-bottom: 10px; } }
+      @media screen and (max-width: 414px) {
+        .propose .text_propose h4 {
+          font-size: 14px; } }
+      @media screen and (max-width: 320px) {
+        .propose .text_propose h4 {
+          font-size: 12px; } }
     .propose .text_propose h3 {
-      font-family: "Montserrat", sans-serif;
-      color: #4a4a49;
       font-weight: 700;
       font-size: 50px;
       text-transform: uppercase;
       line-height: 55px;
       margin-bottom: 75px;
       max-width: 401px; }
+      @media screen and (max-width: 1920px) {
+        .propose .text_propose h3 {
+          font-size: 48px;
+          line-height: 53px;
+          margin-bottom: 20px; } }
+      @media screen and (max-width: 1024px) {
+        .propose .text_propose h3 {
+          font-size: 38px; } }
+      @media screen and (max-width: 768px) {
+        .propose .text_propose h3 {
+          max-width: 362px; } }
+      @media screen and (max-width: 375px) {
+        .propose .text_propose h3 {
+          line-height: 40px;
+          font-size: 45px; } }
+      @media screen and (max-width: 320px) {
+        .propose .text_propose h3 {
+          font-size: 36px;
+          max-width: 300px; } }
     .propose .text_propose p {
-      font-family: "Montserrat", sans-serif;
-      color: #4a4a49;
       font-weight: 300;
       font-size: 18px;
       line-height: 30px;
       max-width: 454px;
       margin-bottom: 33px; }
+      @media screen and (max-width: 1024px) {
+        .propose .text_propose p {
+          font-size: 14px;
+          line-height: 25px;
+          margin-bottom: 25px; } }
+      @media screen and (max-width: 320px) {
+        .propose .text_propose p {
+          max-width: 300px; } }
     .propose .text_propose a {
       text-decoration: none;
       font-family: "Montserrat", sans-serif;
@@ -250,6 +484,13 @@ header {
     background-color: #fef6f1;
     padding-top: 158px;
     padding-left: 93px; }
+    @media screen and (max-width: 1024px) {
+      .propose .img_propose {
+        padding-top: 73px;
+        padding-left: 45px; } }
+    @media screen and (max-width: 768px) {
+      .propose .img_propose {
+        margin-top: 30px; } }
     .propose .img_propose img {
       display: inline-block;
       width: 100%;
@@ -260,34 +501,89 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  @media screen and (max-width: 768px) {
+    .realisation {
+      flex-wrap: wrap; } }
+  @media screen and (max-width: 768px) {
+    .realisation .img_realisation {
+      order: 2; } }
   .realisation .img_realisation img {
-    display: inline-block;
+    display: block;
     width: 100%; }
   .realisation .text_realisation {
-    padding-right: 227px; }
+    padding-right: 159px; }
+    @media screen and (max-width: 1024px) {
+      .realisation .text_realisation {
+        padding-right: 50px;
+        padding-left: 50px; } }
+    @media screen and (max-width: 768px) {
+      .realisation .text_realisation {
+        order: 1;
+        padding: 70px 42px 0 127px;
+        margin-bottom: 20px; } }
+    @media screen and (max-width: 414px) {
+      .realisation .text_realisation {
+        padding: 70px 30px 0 70px; } }
+    @media screen and (max-width: 375px) {
+      .realisation .text_realisation {
+        padding: 50px 25px 0 17px; } }
+    @media screen and (max-width: 320px) {
+      .realisation .text_realisation {
+        padding: 50px 10px 0; } }
     .realisation .text_realisation h4 {
-      font-family: "Montserrat", sans-serif;
       color: #ea6830;
       font-size: 18px;
       text-transform: uppercase;
       margin-bottom: 40px; }
+      @media screen and (max-width: 1024px) {
+        .realisation .text_realisation h4 {
+          margin-bottom: 10px; } }
+      @media screen and (max-width: 414px) {
+        .realisation .text_realisation h4 {
+          font-size: 14px; } }
+      @media screen and (max-width: 320px) {
+        .realisation .text_realisation h4 {
+          font-size: 12px; } }
     .realisation .text_realisation h3 {
-      font-family: "Montserrat", sans-serif;
-      color: #4a4a49;
       text-transform: uppercase;
       font-size: 55px;
       font-weight: 700;
       line-height: 55px;
       max-width: 389px;
       margin-bottom: 77px; }
+      @media screen and (max-width: 1920px) {
+        .realisation .text_realisation h3 {
+          font-size: 48px;
+          line-height: 53px;
+          margin-bottom: 20px; } }
+      @media screen and (max-width: 1024px) {
+        .realisation .text_realisation h3 {
+          font-size: 38px; } }
+      @media screen and (max-width: 768px) {
+        .realisation .text_realisation h3 {
+          max-width: 362px; } }
+      @media screen and (max-width: 375px) {
+        .realisation .text_realisation h3 {
+          line-height: 40px;
+          font-size: 45px; } }
+      @media screen and (max-width: 320px) {
+        .realisation .text_realisation h3 {
+          font-size: 40px;
+          max-width: 300px; } }
     .realisation .text_realisation p {
-      font-family: "Montserrat", sans-serif;
-      color: #4a4a49;
       font-weight: 300;
       font-size: 18px;
       line-height: 30px;
       max-width: 509px;
       margin-bottom: 49px; }
+      @media screen and (max-width: 1024px) {
+        .realisation .text_realisation p {
+          font-size: 14px;
+          line-height: 25px;
+          margin-bottom: 25px; } }
+      @media screen and (max-width: 320px) {
+        .realisation .text_realisation p {
+          max-width: 300px; } }
     .realisation .text_realisation a {
       text-decoration: none;
       font-family: "Montserrat", sans-serif;
@@ -303,10 +599,16 @@ header {
 .zone_contact {
   display: flex;
   justify-content: space-between; }
+  @media screen and (max-width: 414px) {
+    .zone_contact {
+      flex-wrap: wrap; } }
   .zone_contact .left_zone_contact, .zone_contact .right_zone_contact {
     width: 50%;
     padding-top: 50px;
     padding-bottom: 63px; }
+    @media screen and (max-width: 414px) {
+      .zone_contact .left_zone_contact, .zone_contact .right_zone_contact {
+        width: 100%; } }
     .zone_contact .left_zone_contact .contact_zone_sign img, .zone_contact .right_zone_contact .contact_zone_sign img {
       display: block;
       margin: auto;
@@ -318,6 +620,12 @@ header {
       font-size: 40px;
       color: #4a4a49;
       text-align: center; }
+      @media screen and (max-width: 768px) {
+        .zone_contact .left_zone_contact a, .zone_contact .right_zone_contact a {
+          font-size: 32px; } }
+      @media screen and (max-width: 375px) {
+        .zone_contact .left_zone_contact a, .zone_contact .right_zone_contact a {
+          font-size: 25px; } }
   .zone_contact .left_zone_contact {
     background-image: url("../images/visitez_2_07.png");
     background-repeat: no-repeat; }
@@ -341,19 +649,21 @@ footer {
       footer nav ul li {
         display: inline-block;
         margin: 0 16px 59px; }
+        @media screen and (max-width: 768px) {
+          footer nav ul li {
+            margin: 0 16px 15px; }
+            footer nav ul li:last-of-type {
+              margin-bottom: 50px; } }
         footer nav ul li a {
           text-decoration: none;
           color: #4a4a49;
-          font-family: "Montserrat", sans-serif;
           font-size: 12px;
           text-transform: uppercase; }
   footer .footer_soc {
     margin-bottom: 41px;
     text-align: center; }
   footer p {
-    font-family: "Montserrat", sans-serif;
     font-size: 12px;
-    color: #4a4a49;
     text-align: center; }
 
 /*# sourceMappingURL=style.css.map */

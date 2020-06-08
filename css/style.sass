@@ -2,6 +2,7 @@ $main-color: #4a4a49
 $additional-color: #ea6721
 $additional-font-color: #fff
 $font-size: 18px
+$additional-font-size: 14px
 $main-font: 'Montserrat', sans-serif
 
 %for_button
@@ -9,7 +10,7 @@ $main-font: 'Montserrat', sans-serif
   text-align: center
   font-family: $main-font
   font-weight: 600
-  font-size: 14px
+  font-size: $additional-font-size
   color: $additional-font-color
   text-transform: uppercase
 
@@ -44,69 +45,125 @@ $main-font: 'Montserrat', sans-serif
   padding: 0
   margin: 0
 
+body
+  font-family: $main-font
+  color: $main-color
+
 
 header
   padding: 0 14px 0 36px
-  background-color: #eeeeee
+  background-color: #fff
   display: flex
   align-items: center
   justify-content: space-between
+  @include max-screen(1024px)
+    flex-wrap: wrap
+    align-content: space-between
+
+
+  @include max-screen(1280px)
+    padding: 0 10px
 
   .header_logo
-
-    position: relative
-    top: 23px
-    z-index: 1
+    @include max-screen(1024px)
+      order: 2
+    img
+      display: block
+      width: 100%
+      position: relative
+      top: 23px
+      z-index: 4
 
   nav
+    @include max-screen(1024px)
+      order: 1
+      text-align: center
     ul
       list-style: none
       display: inline-block
 
       li
         display: inline-block
-
         a
+          color: $main-color
           text-decoration: none
           text-transform: uppercase
-          font-family: $main-font
-          color: $main-color
           font-size: 16px
-          padding: 0 25px
+          margin: 0 25px
           @include max-screen(1680px)
             padding: 0 15px
+          @include max-screen(1440px)
+            margin: 0 12px
+            font-size: $additional-font-size
+          @include max-screen(1280px)
+            margin: 0 9px
+          @include max-screen(1024px)
+            margin: 0 -5px
+          @include max-screen(414px)
+            margin: 0 -10px
+            font-size: 12px
 
   .header_soc
     @extend %for_soc
+    text-decoration: none
+    @include max-screen(1024px)
+      order: 3
 
 .banner
   background-color: $main-color
   display: flex
-  justify-content: flex-end
+  justify-content: space-between
   padding-bottom: 147px
   @include max-screen(1680px)
     padding-bottom: 100px
+  @include max-screen(414px)
+    flex-wrap: wrap
+    padding-bottom: 50px
 
   .banner_text
     max-width: 511px
     padding-top: 308px
     position: relative
     left: 154px
-    @include max-screen(1680px)
-      padding-top: 65px
+    @include max-screen(1920px)
+      padding-top: 123px
+    @include max-screen(1440px)
+      padding-top: 100px
+    @include max-screen(1280px)
+      padding-top: 40px
+      left: 100px
+    @include max-screen(768px)
+      left: 65px
+    @include max-screen(414px)
+      order: 2
+      left: 0
+      padding-right: 10px
+      max-width: 320px
 
     h1
       color: $additional-font-color
       font-size: 60px
-      font-family: $main-font
       font-weight: 500
       text-transform: uppercase
       line-height: 64px
       margin-bottom: 52px
       text-align: right
+      max-width: 510px
       @include max-screen(1680px)
         font-size: 46px
         margin-bottom: 32px
+      @include max-screen(1440px)
+        font-size: 40px
+        margin-bottom: 28px
+        line-height: 50px
+      @include max-screen(1024px)
+        font-size: 38px
+        line-height: 46px
+        margin-bottom: 24px
+      @include max-screen(768px)
+        font-size: 28px
+        line-height: 36px
+        margin-bottom: 10px
 
       span
         color: $additional-color
@@ -115,35 +172,54 @@ header
       color: $additional-font-color
       font-size: $font-size
       line-height: 30px
-      font-family: $main-font
       font-weight: 300
       margin-bottom: 52px
       text-align: right
+      @media screen and (min-width: 1680px)
+        max-width: 470px
       @include max-screen(1680px)
         font-size: 16px
         margin-bottom: 32px
+      @include max-screen(1440px)
+        font-size: $additional-font-size
+      @include max-screen(1024px)
+        font-size: 12px
+        line-height: 24px
+      @include max-screen(768px)
+        line-height: 18px
+        margin-bottom: 15px
 
     .decouvrir
       text-align: right
 
       a
+        text-decoration: none
         display: inline-block
         @extend %for_button
         line-height: 64px
         padding: 0 100px
-        text-decoration: none
+        @include max-screen(1024px)
+          padding: 0 80px
+        @include max-screen(768px)
+          padding: 0 62px
+          line-height: 50px
+          font-size: 12px
+          font-weight: 500
 
   .banner_img
     img
       display: inline-block
       width: 100%
 
+    @include max-screen(414px)
+      order: 1
+
 .consultation
-  padding: 136px
+  padding-top: 136px
+  @include max-screen(414px)
+    padding: 70px
 
   .text_consultation
-    color: $main-color
-    font-family: $main-font
 
     h2
       font-size: 60px
@@ -153,6 +229,18 @@ header
       max-width: 963px
       margin: auto
       margin-bottom: 56px
+      @include max-screen(1440px)
+        font-size: 52px
+      @include max-screen(1024px)
+        font-size: 46px
+      @include max-screen(768px)
+        max-width: 730px
+        margin-bottom: 40px
+        font-size: 42px
+        line-height: 58px
+      @include max-screen(414px)
+        font-size: 25px
+        line-height: 38px
 
     p
       font-size: $font-size
@@ -162,17 +250,35 @@ header
       text-align: center
       margin: auto
       margin-bottom: 118px
+      @include max-screen(1440px)
+        margin-bottom: 80px
+      @include max-screen(768px)
+        max-width: 670px
+        margin-bottom: 60px
+        font-size: 16px
+      @include max-screen(414px)
+        font-size: $additional-font-size
+        line-height: 20px
 
   .common_img_consultation
     display: flex
     justify-content: space-around
     overflow: hidden
+    padding: 0 200px
+    @include max-screen(1920px)
+      padding: 0 50px
+    @include max-screen(1440px)
+      padding: 0 150px
+      flex-wrap: wrap
+    @include max-screen(1024px)
+      padding: 0
 
     .img_consultation
       position: relative
       overflow: hidden
       padding-top: 16px
       transition: all 1s ease-in-out
+
       &:hover
         -moz-transform: translateX(0px) translateY(-16px)
         -webkit-transform: translateX(0px) translateY(-16px)
@@ -180,6 +286,7 @@ header
         -ms-transform: translateX(0px) translateY(-16px)
         transform: translateX(0px) translateY(-16px)
         transition: all 1s ease-in-out
+
       &:hover .hover_consultation
         display: block
         -moz-transform: translateX(0px) translateY(-16px)
@@ -188,9 +295,10 @@ header
         -ms-transform: translateX(0px) translateY(-16px)
         transform: translateX(0px) translateY(-16px)
         transition: all 1s ease-in-out
+
       img
         position: relative
-        display: inline-block
+        display: block
         width: 100%
         overflow: hidden
         transition: all 1s ease-in-out
@@ -207,12 +315,20 @@ header
         overflow: hidden
         display: none
         transition: all 1s ease-in-out
-
-        @include max-screen(1680px)
+        @include max-screen(1920px)
           padding-top: 129px
+        @include max-screen(1440px)
+          padding-left: 30px
+        @include max-screen(414px)
+          padding-left: 10px
+          padding-top: 60px
+        @include max-screen(375px)
+          padding-top: 20px
+        @include max-screen(320px)
+          padding-right: 10px
+
         p
           color: $additional-font-color
-          font-family: $main-font
           font-size: $font-size
           font-weight: 400
           line-height: 26px
@@ -220,69 +336,130 @@ header
           margin-bottom: 27px
           @include max-screen(1680px)
             max-width: 235px
+          @include max-screen(1440px)
+            max-width: 265px
+          @include max-screen(414px)
+            max-width: 200px
+          @include max-screen(360px)
+            font-size: $additional-font-size
+          @include max-screen(320px)
+            font-size: 12px
+            line-height: 20px
+
         a
           display: inline-block
           line-height: 48px
           padding: 0 63px
           text-decoration: none
           @extend %for_button
+          @include max-screen(414px)
+            padding: 0 50px
+            line-height: 38px
+          @include max-screen(320px)
+            font-weight: 500
+            line-height: 30px
+            font-size: 12px
+            padding: 0 30px
 
     p.interior_name
-      font-family: $main-font
-      color: $main-color
       font-size: 15px
       font-weight: 600
       text-align: center
       text-transform: uppercase
-      line-height: 65px
+      padding: 21px 0 33px
       background-color: #f4f2f2
-      margin-bottom: 144px
+      margin-bottom: 141px
+      @include max-screen(768px)
+        margin-bottom: 100px
+      @include max-screen(320px)
+        font-size: 13px
 
 .propose
   display: flex
   justify-content: space-between
+  @include max-screen(1024px)
+    align-items: center
+  @include max-screen(768px)
+    flex-wrap: wrap
 
   .arc_bg
     img
       position: absolute
       z-index: 4
+      @include max-screen(1280px)
+        display: block
+        width: 100%
+
   .text_propose
-    padding-top: 454px
-    padding-left: 248px
+    padding: 454px 54px 0 248px
+    @include max-screen(1280px)
+      padding: 408px 54px 0 229px
+    @include max-screen(1024px)
+      padding: 323px 42px 0 167px
+    @include max-screen(768px)
+      padding: 239px 42px 0 127px
+    @include max-screen(414px)
+      padding: 123px 30px 0 70px
+    @include max-screen(375px)
+      padding: 111px 25px 0 65px
+    @include max-screen(320px)
+      padding: 95px 10px 0 52px
 
     h4
-      font-family: $main-font
       color: #db6428
       font-weight: 700
       font-size: $font-size
       margin-bottom: 40px
+      @include max-screen(1024px)
+        margin-bottom: 10px
+      @include max-screen(414px)
+        font-size: 14px
+      @include max-screen(320px)
+        font-size: 12px
 
     h3
-      font-family: $main-font
-      color: $main-color
       font-weight: 700
       font-size: 50px
       text-transform: uppercase
       line-height: 55px
       margin-bottom: 75px
       max-width: 401px
+      @include max-screen(1920px)
+        font-size: 48px
+        line-height: 53px
+        margin-bottom: 20px
+      @include max-screen(1024px)
+        font-size: 38px
+      @include max-screen(768px)
+        max-width: 362px
+      @include max-screen(375px)
+        line-height: 40px
+        font-size: 45px
+      @include max-screen(320px)
+        font-size: 36px
+        max-width: 300px
 
     p
-      font-family: $main-font
-      color: $main-color
       font-weight: 300
       font-size: $font-size
       line-height: 30px
       max-width: 454px
       margin-bottom: 33px
+      @include max-screen(1024px)
+        font-size: $additional-font-size
+        line-height: 25px
+        margin-bottom: 25px
+      @include max-screen(320px)
+        max-width: 300px
 
     a
       text-decoration: none
       font-family: $main-font
       color: #000
-      font-size: 14px
+      font-size: $additional-font-size
       text-transform: uppercase
       transition: all 1s ease-in-out
+
       &:hover
         padding-left: 20px
         transition: all 1s ease-in-out
@@ -292,6 +469,12 @@ header
     background-color: #fef6f1
     padding-top: 158px
     padding-left: 93px
+    @include max-screen(1024px)
+      padding-top: 73px
+      padding-left: 45px
+    @include max-screen(768px)
+      margin-top: 30px
+
     img
       display: inline-block
       width: 100%
@@ -302,48 +485,88 @@ header
   display: flex
   justify-content: space-between
   align-items: center
+  @include max-screen(768px)
+    flex-wrap: wrap
 
   .img_realisation
+    @include max-screen(768px)
+      order: 2
     img
-      display: inline-block
+      display: block
       width: 100%
 
   .text_realisation
-    padding-right: 227px
+    padding-right: 159px
+    @include max-screen(1024px)
+      padding-right: 50px
+      padding-left: 50px
+    @include max-screen(768px)
+      order: 1
+      padding: 70px 42px 0 127px
+      margin-bottom: 20px
+    @include max-screen(414px)
+      padding: 70px 30px 0 70px
+    @include max-screen(375px)
+      padding: 50px 25px 0 17px
+    @include max-screen(320px)
+      padding: 50px 10px 0
+
     h4
-      font-family: $main-font
       color: #ea6830
       font-size: 18px
       text-transform: uppercase
       margin-bottom: 40px
+      @include max-screen(1024px)
+        margin-bottom: 10px
+      @include max-screen(414px)
+        font-size: $additional-font-size
+      @include max-screen(320px)
+        font-size: 12px
 
     h3
-      font-family: $main-font
-      color: $main-color
       text-transform: uppercase
       font-size: 55px
       font-weight: 700
       line-height: 55px
       max-width: 389px
       margin-bottom: 77px
+      @include max-screen(1920px)
+        font-size: 48px
+        line-height: 53px
+        margin-bottom: 20px
+      @include max-screen(1024px)
+        font-size: 38px
+      @include max-screen(768px)
+        max-width: 362px
+      @include max-screen(375px)
+        line-height: 40px
+        font-size: 45px
+      @include max-screen(320px)
+        font-size: 40px
+        max-width: 300px
 
     p
-      font-family: $main-font
-      color: $main-color
       font-weight: 300
       font-size: $font-size
       line-height: 30px
       max-width: 509px
       margin-bottom: 49px
+      @include max-screen(1024px)
+        font-size: $additional-font-size
+        line-height: 25px
+        margin-bottom: 25px
+      @include max-screen(320px)
+        max-width: 300px
 
     a
       text-decoration: none
       font-family: $main-font
       color: $main-color
-      font-size: 14px
+      font-size: $additional-font-size
       text-transform: uppercase
       padding-left: 5px
       transition: all 1s ease-in-out
+
       &:hover
         padding-left: 20px
         transition: all 1s ease-in-out
@@ -351,17 +574,22 @@ header
 .zone_contact
   display: flex
   justify-content: space-between
+  @include max-screen(414px)
+    flex-wrap: wrap
+
   .left_zone_contact, .right_zone_contact
     width: 50%
     padding-top: 50px
     padding-bottom: 63px
-    //&:hover
-    //  background-image: url("../images/visitez_07.jpg")
+    @include max-screen(414px)
+      width: 100%
+
     .contact_zone_sign
       img
         display: block
         margin: auto
         margin-bottom: 36px
+
     a
       display: block
       text-decoration: none
@@ -369,6 +597,10 @@ header
       font-size: 40px
       color: $main-color
       text-align: center
+      @include max-screen(768px)
+        font-size: 32px
+      @include max-screen(375px)
+        font-size: 25px
 
   .left_zone_contact
     background-image: url("../images/visitez_2_07.png")
@@ -382,6 +614,7 @@ footer
   background-color: #f4f2f2
   padding-top: 76px
   padding-bottom: 38px
+
   img
     display: block
     margin: auto
@@ -389,16 +622,22 @@ footer
 
   nav
     text-align: center
+
     ul
       list-style: none
       display: inline-block
+
       li
         display: inline-block
         margin: 0 16px 59px
+        @include max-screen(768px)
+          margin: 0 16px 15px
+          &:last-of-type
+            margin-bottom: 50px
+
         a
           text-decoration: none
           color: $main-color
-          font-family: $main-font
           font-size: 12px
           text-transform: uppercase
 
@@ -408,30 +647,5 @@ footer
     text-align: center
 
   p
-    font-family: $main-font
     font-size: 12px
-    color: $main-color
     text-align: center
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
